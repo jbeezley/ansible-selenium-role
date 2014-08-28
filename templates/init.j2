@@ -94,7 +94,7 @@ start)
         JAR_ARGS="${JAR_ARGS} -port ${PORT}"
     fi
 
-    start-stop-daemon   --start \
+    DISPLAY=:0 start-stop-daemon   --start \
                         --background \
                         --pidfile "${SE_PID}" \
                         --make-pidfile \
