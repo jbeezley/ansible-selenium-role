@@ -121,7 +121,7 @@ stop)
     fi
 ;;
 status)
-   start-stop-daemon --status --pidfile "${SE_PID}" --name ${NAME}
+   start-stop-daemon --status --pidfile "${SE_PID}"
    rc=$?
    case $rc in
       0) msg="$NAME is running with pid: $( cat ${SE_PID})." ;;
