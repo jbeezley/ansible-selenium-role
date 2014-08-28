@@ -133,7 +133,7 @@ status)
    return $rc
 ;;
 version)
-    echo "${NAME} {{server_version}}"
+    echo "${NAME} {{server_major_version}}.{{server_minor_version}}.{{server_release_version}}"
 ;;
 restart)
     $0 stop || true

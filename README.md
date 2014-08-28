@@ -14,8 +14,8 @@ Role Variables
 Info for downloading seleinum version
 
     download_url: http://selenium.googlecode.com/files/{{jar_file}}
-    jar_file: selenium-server-standalone-{{server_version}}.jar
-    server_version: 2.39.0
+    jar_file: selenium-server-standalone-x.x.x.jar
+    server_version: x.x.x
 
 Roles can be: standalone, hub or node
 

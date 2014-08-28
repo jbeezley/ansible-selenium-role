@@ -1,7 +1,9 @@
 ---
-download_url: http://selenium.googlecode.com/files/{{jar_file}}
-jar_file: selenium-server-standalone-{{server_version}}.jar
-server_version: 2.39.0
+download_url: http://selenium-release.storage.googleapis.com/{{server_major_version}}.{{server_minor_version}}/{{jar_file}}
+jar_file: selenium-server-standalone-{{server_major_version}}.{{server_minor_version}}.{{server_release_version}}.jar
+server_major_version: 2
+server_minor_version: 42
+server_release_version: 2
 
 sel_role: standalone
 
