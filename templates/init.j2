@@ -106,7 +106,9 @@ start)
 stop)
     log_daemon_msg "Stopping ${DESC}" "${NAME}"
     $0 status
-    if [ $? -eq 0 ]; then
+    s=$?
+    case $s in
+      0)
         start-stop-daemon   --stop \
                             --pidfile "${SE_PID}" \
                             --retry=TERM/30/KILL/5
@@ -117,8 +119,10 @@ stop)
             fi
             log_daemon_msg "${NAME} stopped"
         fi
-        return ${rc}
-    fi
+        return ${rc} ;;
+      *) rm -f "${SE_PID}" ;;
+     esac
+     return $s
 ;;
 status)
    start-stop-daemon --status --pidfile "${SE_PID}"
